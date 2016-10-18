@@ -1,0 +1,79 @@
+<div class="summary" id="summary">
+    <div class="summary-container">
+        <table width="100%">
+            {{each list}}
+            <tr>
+                <td colspan="6">
+                    <i id="m-{{$value.name}}" class="icon icon-ok-circled active checkbox" /></i>
+                    <label class="medicine" for="m-{{$value.name}}">
+                        <span class="medicine-name">{{$value.name}}</span>
+                        <span class="medicine-brand">{{$value.brand}}</span>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="scard scard-sleep {{if activeIssues && activeIssues.sleep}}active{{/if}}">
+                        <div class="scard-header">
+                            Sleep
+                        </div>
+                        <div class="scard-cnt">
+                            <p>{{$value.sleep.name}}</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="scard scard-weight {{if activeIssues && activeIssues.weight}}active{{/if}}">
+                        <div class="scard-header">
+                            Weight Change
+                        </div>
+                        <div class="scard-cnt">
+                            <p>{{$value.weight.name}}</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="scard scard-stop {{if activeIssues && activeIssues.stop}}active{{/if}}">
+                        <div class="scard-header">
+                            Stopping Approach
+                        </div>
+                        <div class="scard-cnt">
+                            <p>{{$value.stop.name}}</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="scard scard-sex {{if activeIssues && activeIssues.sex}}active{{/if}}">
+                        <div class="scard-header">
+                            Sexual Issues
+                        </div>
+                        <div class="scard-cnt">
+                            <p>{{$value.sex.name}}</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="scard scard-cost {{if activeIssues && activeIssues.cost}}active{{/if}}">
+                        <div class="scard-header">
+                            Cost
+                        </div>
+                        <div class="scard-cnt">
+                            <p>{{$value.cost.name}}</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="scard scard-mind active">
+                        <div class="scard-header">
+                            Keep In Mind
+                        </div>
+                        <div class="scard-cnt">
+                            <p>{{$value.mind.name}}</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+</div>

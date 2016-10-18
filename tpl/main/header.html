@@ -1,0 +1,20 @@
+<div class="header" id="header">
+    <div class="header-bar" id="header-bar">
+        <div class="left bar-control">
+            <a href="javascript:;" class="gohome"><i class="icon icon-left-open-big"></i>HOME</a>
+        </div>
+        <ul class="menu">
+            <li><a href="javascript:;" class="item item-issue item-sleep {{if activeIssues && activeIssues.sleep}}active{{/if}}" data-type="sleep">Sleep</a></li>
+            <li><a href="javascript:;" class="item item-issue item-stop {{if activeIssues && activeIssues.stop}}active{{/if}}" data-type="stop">Stopping Approach</a></li>
+            <li><a href="javascript:;" class="item item-issue item-weight {{if activeIssues && activeIssues.weight}}active{{/if}}" data-type="weight">Weight Change</a></li>
+            <li><a href="javascript:;" class="item item-issue item-sex {{if activeIssues && activeIssues.sex}}active{{/if}}" data-type="sex">Sexual Issues</a></li>
+            <li><a href="javascript:;" class="item item-issue item-cost {{if activeIssues && activeIssues.cost}}active{{/if}}" data-type="cost">Cost</a></li>
+            <!--<li class="separate"></li>-->
+            <!--<li><a href="javascript:;" class="item item-mind {{if activeIssues && activeIssues.mind}}active{{/if}}" data-type="mind">Keep In Mind</a></li>-->
+        </ul>
+        <div class="right bar-control">
+            <!--<a href="javascript:;" class="{{if !isSummaryActive}}disabled{{/if}}" id="btn-summary">Summary <i class="icon icon-right-open-big"></i></a>-->
+            <a href="javascript:;" id="btn-summary">SUMMARY <i class="icon icon-right-open-big"></i></a>
+        </div>
+    </div>
+</div>

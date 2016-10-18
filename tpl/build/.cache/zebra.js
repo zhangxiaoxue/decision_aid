@@ -1,0 +1,2 @@
+/*TMODJS:{"version":2,"md5":"cb581b3dc785ffaf6ccc7454ac9f61c6"}*/
+template('zebra','<div class="zebra"> <div class="odd active"></div> <div class="even"></div> <div class="odd"></div> <div class="even"></div> <div class="odd"></div> <div class="even"></div> <div class="odd"></div> <div class="even"></div> <div class="odd"></div> <div class="even"></div> <div class="odd"></div> <div class="even row-2"></div> </div>');

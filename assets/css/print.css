@@ -1,0 +1,15 @@
+.header{
+    display: none;
+}
+table{
+    border-collapse: collapse;
+}
+table th,
+table td{
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+table .scard-header{
+    font-weight: bold;
+    padding-bottom: 10px;
+}

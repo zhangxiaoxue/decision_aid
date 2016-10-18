@@ -1,0 +1,2 @@
+/*TMODJS:{"version":7,"md5":"096156f1540b2455d2b9e46f548c1578"}*/
+template('main/empty','<div class="content" id="content"> <div class="empty"> <div class="icon icon-chat"></div> <p>Which issues would you like to discuss?</p> </div> </div>');
