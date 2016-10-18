@@ -1,2 +1,0 @@
-/*TMODJS:{"version":9,"md5":"5e9b83c4f64ac37bc66e6da7949b1d0b"}*/
-template('main/summary','<div class="summary" id="summary"> <div class="empty"> <p>Select Issues for Side by Side Comparison</p> </div> <table> <tr> <td> <a class="icon icon-ok-circled" href="javascript:;"></a> </td> <td> <div class="medicine"> <p class="medicine-name">Mirtazapine</p> <p class="medicine-brand">(Remeron®)</p> </div> </td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr> </table> </div>');

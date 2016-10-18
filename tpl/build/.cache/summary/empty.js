@@ -1,2 +1,0 @@
-/*TMODJS:{"version":4,"md5":"6306597bf00f38cb3731458512f6cf4c"}*/
-template('summary/empty','<div class="content" id="content"> <div class="empty"> <p>Please choose your medicine in the previous step.</p> </div> </div>');
