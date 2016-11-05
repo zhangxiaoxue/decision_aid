@@ -24,13 +24,13 @@ gulp.task('usemin', ['clean'], function() {
             css: [minifyCss, rev],
             js: [uglify, rev]
         }))
-        .pipe(gulp.dest('doc/'));
+        .pipe(gulp.dest('docs/'));
 });
 
 gulp.task('copy', function() {
     return gulp.src('assets/font/*')
         .pipe(newer('assets/font/*'))
-        .pipe(gulp.dest('doc/assets/font'));
+        .pipe(gulp.dest('docs/assets/font'));
 });
 
 // Minify any new images
@@ -39,13 +39,13 @@ gulp.task('images', function() {
     return gulp.src('assets/img/*')
         .pipe(newer('assets/img/*'))
         .pipe(imagemin())
-        .pipe(gulp.dest('doc/assets/img'));
+        .pipe(gulp.dest('docs/assets/img'));
 });
 
 gulp.task('datamin', function() {
     return gulp.src('data/*.json')
         .pipe(newer('data/*.json'))
         .pipe(jsonmin())
-        .pipe(gulp.dest('doc/data'));
+        .pipe(gulp.dest('docs/data'));
 });
 
