@@ -15,7 +15,7 @@ var browserSync = require('browser-sync').create();
 gulp.task('default', ['usemin', 'copy', 'images', 'datamin']);
 
 gulp.task('clean', function () {
-    return gulp.src(['dist/assets/css', 'dist/assets/js'], {read: false})
+    return gulp.src(['doc/assets/css', 'doc/assets/js'], {read: false})
         .pipe(clean());
 });
 gulp.task('usemin', ['clean'], function() {
@@ -24,13 +24,13 @@ gulp.task('usemin', ['clean'], function() {
             css: [minifyCss, rev],
             js: [uglify, rev]
         }))
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('doc/'));
 });
 
 gulp.task('copy', function() {
     return gulp.src('assets/font/*')
         .pipe(newer('assets/font/*'))
-        .pipe(gulp.dest('dist/assets/font'));
+        .pipe(gulp.dest('doc/assets/font'));
 });
 
 // Minify any new images
@@ -39,13 +39,13 @@ gulp.task('images', function() {
     return gulp.src('assets/img/*')
         .pipe(newer('assets/img/*'))
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/assets/img'));
+        .pipe(gulp.dest('doc/assets/img'));
 });
 
 gulp.task('datamin', function() {
     return gulp.src('data/*.json')
         .pipe(newer('data/*.json'))
         .pipe(jsonmin())
-        .pipe(gulp.dest('dist/data'));
+        .pipe(gulp.dest('doc/data'));
 });
 

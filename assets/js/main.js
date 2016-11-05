@@ -22,11 +22,11 @@
     //main page
     router.add("/index", function () {
 
+        activeMedicine = Cookies.getJSON('activeMedicine') || {};
+
         if(Cookies.getJSON('activeIssues')){
             var isSummaryActive = false;
-
             activeIssues = Cookies.getJSON('activeIssues') || {};
-            activeMedicine = Cookies.getJSON('activeMedicine') || {};
 
             $.each(activeMedicine, function(key, value){
                 if(value){
@@ -74,7 +74,7 @@
 
         activeIssues = Cookies.getJSON('activeIssues') || {};
 
-        $.getJSON('/data/medicines.json', function(resp){
+        $.getJSON('./data/medicines.json', function(resp){
             var data = resp;
             var activeData = [];
 
@@ -109,8 +109,8 @@
             e.preventDefault();
 
             //clear cookie
-            Cookies.remove('activeMedicine', { path: '' });
-            Cookies.remove('activeIssues', { path: '' });
+            Cookies.remove('activeMedicine', { path: './' });
+            Cookies.remove('activeIssues', { path: './' });
 
             window.location.href = '#!/index';
         })
@@ -268,8 +268,8 @@
             e.preventDefault();
 
             //clear cookie
-            Cookies.remove('activeMedicine', { path: '' });
-            Cookies.remove('activeIssues', { path: '' });
+            Cookies.remove('activeMedicine', { path: './' });
+            Cookies.remove('activeIssues', { path: './' });
 
             window.location.href = '#!/';
         });
@@ -290,11 +290,11 @@
     function updateActiveIssues(activeIssues, type, boolen){
         activeIssues[type] = boolen;
 
-        Cookies.set("activeIssues", activeIssues, { expires: 1, path: ''});
+        Cookies.set("activeIssues", activeIssues, { expires: 1, path: './'});
     }
 
     function updateActiveMedicine(activeMedicine, index, boolen){
         activeMedicine[index] = boolen;
-        Cookies.set("activeMedicine", activeMedicine, { expires: 1, path: ''});
+        Cookies.set("activeMedicine", activeMedicine, { expires: 1, path: './'});
     }
 })();
